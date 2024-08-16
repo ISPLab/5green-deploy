@@ -49,7 +49,7 @@ spec:
               value: ws://transactor/
             - name: UPLOAD_URL
               value: /files
-          image: hardcoreeng/collaborator:latest
+          image: andreusimus/collaborator:latest
           name: collaborator
           ports:
             - containerPort: 3078

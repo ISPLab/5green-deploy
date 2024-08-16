@@ -42,7 +42,7 @@ services:
       test: curl -s http://localhost:9200/_cluster/health | grep -vq '"status":"red"'
     restart: unless-stopped
   account:
-    image: hardcoreeng/account:${HULY_VERSION}
+    image: andreusimus/account:${HULY_VERSION}
     links:
       - mongodb
       - minio
@@ -63,7 +63,7 @@ services:
       - ACCOUNT_PORT=3000
     restart: unless-stopped
   front:
-    image: hardcoreeng/front:${HULY_VERSION}
+    image: andreusimus/front:${HULY_VERSION}
     links:
       - mongodb
       - minio
@@ -93,7 +93,7 @@ services:
       - LAST_NAME_FIRST=true
     restart: unless-stopped
   collaborator:
-    image: hardcoreeng/collaborator:${HULY_VERSION}
+    image: andreusimus/collaborator:${HULY_VERSION}
     links:
       - mongodb
       - minio
@@ -111,7 +111,7 @@ services:
       - MINIO_SECRET_KEY=minioadmin
     restart: unless-stopped
   transactor:
-    image: hardcoreeng/transactor:${HULY_VERSION}
+    image: andreusimus/transactor:${HULY_VERSION}
     links:
       - mongodb
       - elastic
@@ -140,7 +140,7 @@ services:
       - UPLOAD_URL=http://${SERVER_ADDRESS}/files
     restart: unless-stopped
   rekoni:
-    image: hardcoreeng/rekoni-service:${HULY_VERSION}
+    image: andreusimus/rekoni-service:${HULY_VERSION}
     ports:
       - 4004:4004
     environment:

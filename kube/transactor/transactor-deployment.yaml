@@ -68,7 +68,7 @@ spec:
                   key: SERVER_SECRET
             - name: UPLOAD_URL
               value: /files
-          image: hardcoreeng/transactor:latest
+          image: andreusimus/transactor:latest
           name: transactor
           ports:
             - containerPort: 3333

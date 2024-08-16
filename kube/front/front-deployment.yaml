@@ -85,7 +85,7 @@ spec:
                   key: TRANSACTOR_URL
             - name: UPLOAD_URL
               value: /files
-          image: hardcoreeng/front:latest
+          image: andreusimus/front:latest
           name: front
           ports:
             - containerPort: 8080
