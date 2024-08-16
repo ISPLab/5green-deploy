@@ -140,7 +140,7 @@ services:
       - UPLOAD_URL=http://${SERVER_ADDRESS}/files
     restart: unless-stopped
   rekoni:
-    image: andreusimus/rekoni-service:${HULY_VERSION}
+    image: hardcoreeng/rekoni-service:${HULY_VERSION}
     ports:
       - 4004:4004
     environment:
@@ -155,3 +155,4 @@ volumes:
   files:
   elastic:
   etcd:
+
